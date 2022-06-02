@@ -4,13 +4,13 @@ const Write = () => {
         <div>
             <Navbar/>
             <div className="function content">
-                <div className="function box">
+                <div className="function box" onClick={() => window.location.replace('/approve')}>
                     <span className="function text">approve</span>
                 </div>
-                <div className="function box">
+                <div className="function box" onClick={() => window.location.replace('/burn')}>
                     <span className="function text">burn</span>
                 </div>
-                <div className="function box">
+                <div className="function box" onClick={() => window.location.replace('/burnfrom')}>
                     <span className="function text">burnFrom</span>
                 </div>
                 <div className="function box">

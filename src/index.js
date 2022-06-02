@@ -15,6 +15,7 @@ import BalanceOf from './pages/read-pages/BalanceOf'
 //Write Pages //
 import Approve from './pages/write-pages/Approve'
 import Burn from './pages/write-pages/Burn'
+import BurnFrom from './pages/write-pages/BurnFrom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
       <Route path="/balanceof" element={<BalanceOf/>}/>
       <Route path="/approve" element={<Approve/>}/>
       <Route path="/burn" element={<Burn/>}/>
+      <Route path="/burnfrom" element={<BurnFrom/>}/>
     </Routes>
   </BrowserRouter>
 );
