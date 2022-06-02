@@ -8,7 +8,7 @@ On this repo we compile different use cases from ethers.js.
 
 -> Run Instructions:
 <br/>
-    - ```npm install``
+    - ```npm install```
 <br/>
     - ```npm run```
 
