@@ -20,4 +20,4 @@ On this repo we compile different use cases from ethers.js.
 
 -> Other Informations:
 <br/>
-    - If you want to do login just go to the create account page coppy the hash generated and past on the if inside the App.js file
+    - If you want to do login just go to the create account page, coppy the hash generated and past on the if inside the App.js file
