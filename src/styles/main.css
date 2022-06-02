@@ -1,0 +1,75 @@
+/*BACKGROUND START*/
+body{
+	margin:0;
+	padding:0;
+	font-family:"arial",heletica,sans-serif;
+	font-size:12px;
+    background: #2980b9 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+	-webkit-animation: 10s linear 0s normal none infinite animate;
+	-moz-animation: 10s linear 0s normal none infinite animate;
+	-ms-animation: 10s linear 0s normal none infinite animate;
+	-o-animation: 10s linear 0s normal none infinite animate;
+	animation: 10s linear 0s normal none infinite animate;
+ 
+}
+@-webkit-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-moz-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-ms-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@-o-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+ 
+@keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 500px 0;}
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .title{
+    text-align: center;
+    font-size: 2rem;
+    color: #1474B3;
+}
+
+.info{
+    padding-top: 20px;
+}
+
+.metamask.btn{
+    background-color: #1474B3;
+    border: none;
+    border-radius: 8px;
+    height: 60px;
+    width: 240px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.btn.query{
+	width: 200px;
+	height: 60px;
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 8px;
+	background-color: inherit;
+	font-size: 1.5rem;
+}

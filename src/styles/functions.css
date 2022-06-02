@@ -1,0 +1,43 @@
+.function.content{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+ .function.box{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 200px;
+     height: 200px;
+     border-radius: 8px;
+     background-color: #fff;
+     cursor: pointer;
+ }
+
+ .function.text{
+     font-size: 1.1rem;
+ }
+ .function.read-box{
+     width: 500px;
+     height: 600px;
+     border-radius: 8px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .function.label{
+     font-size: 1.2rem;
+    color: #fff
+ }
+ .function.input{
+    width: 400px;
+    height: 60px;
+    border-radius: 8px;
+    background: #fff;
+    border: none;
+    font-size: 1.5rem;
+ }
+ .function.info{
+     padding-top: 50px;
+ }
