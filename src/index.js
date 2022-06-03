@@ -17,6 +17,12 @@ import Approve from './pages/write-pages/Approve'
 import Burn from './pages/write-pages/Burn'
 import BurnFrom from './pages/write-pages/BurnFrom'
 import DecreaseAllowance from './pages/write-pages/DecreaseAllowance'
+import IncreaseAllowance from './pages/write-pages/IncreaseAllowance'
+import Mint from './pages/write-pages/Mint'
+import Transfer from './pages/write-pages/Transfer'
+import TransferFrom from './pages/write-pages/TransferFrom'
+import TransferOwnership from './pages/write-pages/TransferOwnership'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -32,6 +38,12 @@ root.render(
       <Route path="/burn" element={<Burn/>}/>
       <Route path="/burnfrom" element={<BurnFrom/>}/>
       <Route path="/decreaseallowance" element={<DecreaseAllowance/>}/>
+      <Route path="/increaseallowance" element={<IncreaseAllowance/>}/>
+      <Route path="/mint" element={<Mint/>}/>
+      <Route path="/transfer" element={<Transfer/>}/>
+      <Route path="/transferfrom" element={<TransferFrom/>}/>
+      <Route path="/transferownership" element={<TransferOwnership/>}/>
+
     </Routes>
   </BrowserRouter>
 );

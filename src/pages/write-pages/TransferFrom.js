@@ -3,14 +3,16 @@ import { useState } from "react"
 import contract from "../../constants/writeContract"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const DecreaseAllowance = () => {
-    const [address, setAddress] = useState('')
+
+const TransferFrom = () => {
+    const [from, setFrom] = useState('')
+    const [to, setTo] = useState('')
     const [amount, setAmount] = useState()
-    
-    async function decreaseAllowance(){
-        const decrease = await contract.decreaseAllowance(address, amount)
-        .then((decrease) => {
-            toast.success('Transaction approved with hash: ' + decrease.hash, {
+
+    async function transferFrom(){
+        const transfer = await contract.transfer(from, to, amount)
+        .then((transfer) => {
+            toast.success('Transaction approved with hash: ' + transfer.hash, {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -19,27 +21,29 @@ const DecreaseAllowance = () => {
                 draggable: true,
                 progress: undefined,
                 });
-        }
-        )
+        })
         .catch((error) => console.log(error))
     }
-
     return(
         <div>
-            <Navbar/>
+              <Navbar/>
             <div className="function content">
                 <div className="function read-box">
-                    <h1 style={{color: '#FFF'}}>Decrease Allowance</h1>
+                    <h1 style={{color: '#FFF'}}>Transfer</h1>
                     <div className="info">
-                    <p className="function label">Address</p>
-                    <input className="function input" onChange={(e) => setAddress(e.target.value)}></input>
+                    <p className="function label">From (Address)</p>
+                    <input className="function input" onChange={(e) => setFrom(e.target.value)}></input>
+                    </div>
+                    <div className="info">
+                    <p className="function label">To (Address)</p>
+                    <input className="function input" onChange={(e) => setTo(e.target.value)}></input>
                     </div>
                     <div className="info">
                     <p className="function label">Amount (uint256)</p>
                     <input className="function input" type="number" onChange={(e) =>setAmount(e.target.value)}></input>
                     </div>
                     <div className="info">
-                        <button className="btn query" onClick={decreaseAllowance}>Write</button>
+                        <button className="btn query" onClick={transferFrom}>Write</button>
                     </div>
                 </div>
             </div>
@@ -57,4 +61,5 @@ const DecreaseAllowance = () => {
         </div>
     )
 }
-export default DecreaseAllowance
+
+export default TransferFrom

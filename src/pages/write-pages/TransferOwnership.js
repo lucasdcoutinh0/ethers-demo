@@ -3,14 +3,15 @@ import { useState } from "react"
 import contract from "../../constants/writeContract"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const DecreaseAllowance = () => {
+
+const TransferOwnership = () => {
     const [address, setAddress] = useState('')
     const [amount, setAmount] = useState()
-    
-    async function decreaseAllowance(){
-        const decrease = await contract.decreaseAllowance(address, amount)
-        .then((decrease) => {
-            toast.success('Transaction approved with hash: ' + decrease.hash, {
+
+    async function transferOwnership(){
+        const owner = await contract.transferOwnership(address)
+        .then((transfered) => {
+            toast.success('Transaction approved with hash: ' + transfered.hash, {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -19,17 +20,15 @@ const DecreaseAllowance = () => {
                 draggable: true,
                 progress: undefined,
                 });
-        }
-        )
+        })
         .catch((error) => console.log(error))
     }
-
     return(
         <div>
-            <Navbar/>
+              <Navbar/>
             <div className="function content">
                 <div className="function read-box">
-                    <h1 style={{color: '#FFF'}}>Decrease Allowance</h1>
+                    <h1 style={{color: '#FFF'}}>Transfer</h1>
                     <div className="info">
                     <p className="function label">Address</p>
                     <input className="function input" onChange={(e) => setAddress(e.target.value)}></input>
@@ -39,7 +38,7 @@ const DecreaseAllowance = () => {
                     <input className="function input" type="number" onChange={(e) =>setAmount(e.target.value)}></input>
                     </div>
                     <div className="info">
-                        <button className="btn query" onClick={decreaseAllowance}>Write</button>
+                        <button className="btn query" onClick={transferOwnership}>Write</button>
                     </div>
                 </div>
             </div>
@@ -57,4 +56,5 @@ const DecreaseAllowance = () => {
         </div>
     )
 }
-export default DecreaseAllowance
+
+export default TransferOwnership
